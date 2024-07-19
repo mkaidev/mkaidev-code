@@ -1,10 +1,11 @@
 "use server";
 
 import { nanoid } from "nanoid";
-import { liveblocks } from "../liveblocks";
 import { revalidatePath } from "next/cache";
-import { getAccessType, parseStringify } from "../utils";
 import { redirect } from "next/navigation";
+
+import { liveblocks } from "../liveblocks";
+import { getAccessType, parseStringify } from "../utils";
 
 export const createDocument = async ({
   userId,
