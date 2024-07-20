@@ -1,13 +1,14 @@
 "use client";
 
-import Loader from "@/components/Loader";
-import { getClerkUsers, getDocumentUsers } from "@/lib/actions/user.actions";
+import { ReactNode } from "react";
 import { useUser } from "@clerk/nextjs";
 import {
   ClientSideSuspense,
   LiveblocksProvider,
 } from "@liveblocks/react/suspense";
-import { ReactNode } from "react";
+
+import { getClerkUsers, getDocumentUsers } from "@/lib/actions/user.actions";
+import Loader from "@/components/Loader";
 
 const Provider = ({ children }: { children: ReactNode }) => {
   const { user: clerkUser } = useUser();
