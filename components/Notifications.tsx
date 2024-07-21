@@ -1,10 +1,7 @@
 "use client";
 
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+import Image from "next/image";
+import { ReactNode } from "react";
 import {
   InboxNotification,
   InboxNotificationList,
@@ -14,8 +11,12 @@ import {
   useInboxNotifications,
   useUnreadInboxNotificationsCount,
 } from "@liveblocks/react/suspense";
-import Image from "next/image";
-import { ReactNode } from "react";
+
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 const Notifications = () => {
   const { inboxNotifications } = useInboxNotifications();
